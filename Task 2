@@ -1,0 +1,53 @@
+# Python program to track and manage student grades. The program allow the user to input grades for different subjects or assignments, calculate the average grade, and display the overall grade along with any additional information (such as letter grade or GPA).
+def get_grade_input():
+    grades = []
+    while True:
+        try:
+            grade_input = input("Enter a grade (or type 'done' to finish): ")
+            if grade_input.lower() == 'done':
+                break
+            grade = float(grade_input)
+            if 0 <= grade <= 100:
+                grades.append(grade)
+            else:
+                print("Please enter a grade between 0 and 100.")
+        except ValueError:
+            print("Invalid input. Please enter a numerical grade.")
+    return grades
+
+def calculate_average(grades):
+    if grades:
+        return sum(grades) / len(grades)
+    else:
+        return 0
+
+def determine_letter_grade(average):
+    if average >= 90:
+        return 'A'
+    elif average >= 80:
+        return 'B'
+    elif average >= 70:
+        return 'C'
+    elif average >= 60:
+        return 'D'
+    else:
+        return 'F'
+
+def calculate_gpa(average):
+    return round((average / 100) * 4.0, 2)
+
+def display_results(average, letter_grade, gpa):
+    print(f"\nAverage Grade: {average:.2f}")
+    print(f"Letter Grade: {letter_grade}")
+    print(f"GPA: {gpa:.2f}")
+
+def main():
+    print("Welcome to the Student Grade Tracker!")
+    grades = get_grade_input()
+    average = calculate_average(grades)
+    letter_grade = determine_letter_grade(average)
+    gpa = calculate_gpa(average)
+    display_results(average, letter_grade, gpa)
+
+if __name__ == "__main__":
+    main()
