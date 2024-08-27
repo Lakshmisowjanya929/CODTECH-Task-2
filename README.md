@@ -20,3 +20,15 @@ Convert the average grade into a letter grade based on a predefined grading scal
 
 Compute GPA:
 Translate the average grade into a Grade Point Average (GPA) on a standard 4.0 scale.
+OUTPUT:
+Welcome to the Student Grade Tracker!
+Enter a grade (or type 'done' to finish): 96
+Enter a grade (or type 'done' to finish): 93
+Enter a grade (or type 'done' to finish): 87
+Enter a grade (or type 'done' to finish): 83
+Enter a grade (or type 'done' to finish): 79
+Enter a grade (or type 'done' to finish): 80
+Enter a grade (or type 'done' to finish): done
+Average Grade: 86.33
+Letter Grade: B
+GPA: 3.45
