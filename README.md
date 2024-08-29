@@ -32,3 +32,5 @@ Enter a grade (or type 'done' to finish): done
 Average Grade: 86.33
 Letter Grade: B
 GPA: 3.45
+![Screenshot (3)](https://github.com/user-attachments/assets/fcb89829-d9a6-4e9d-a4de-16966d48a48b)
+
